@@ -1,9 +1,11 @@
 ﻿@model WebFlashAsh.Models.ProductDto
 
-<form asp-action="ProductCreate">
+<form asp-action="ProductEdit">
+    <input asp-for="ProductId" hidden/>
+
     <br />
     <div class="container border p-3">
-        <h1 class="text-info">Create Product</h1>
+        <h1 class="text-info">Edit Product</h1>
 
         <hr />
         <div class="row">
@@ -41,7 +43,7 @@
                 <a asp-action="ProductIndex" class="btn-primary btn form-control ">Back to List</a>
             </div>
             <div class="col-5">
-                <input type="submit" value="Create" class="btn btn-success form-control" />
+                <input type="submit" value="Update" class="btn btn-success form-control" />
 
             </div>
 
@@ -55,3 +57,5 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+
