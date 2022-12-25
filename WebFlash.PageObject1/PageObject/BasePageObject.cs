@@ -10,7 +10,7 @@ using WebFlash.PageObject1.WCPageObject;
 
 namespace WebFlash.PageObject1.PageObject
 {
-    public class BasePage 
+    public class BasePageObject 
     {
         public IWebDriver _driver;
         #region LOCATORS
@@ -19,7 +19,7 @@ namespace WebFlash.PageObject1.PageObject
         public By HeaderLogo => By.XPath("//a[@class='navbar-brand']");
         public  By HomeFutter => By.XPath("");
         #endregion
-        public BasePage(IWebDriver driver)
+        public BasePageObject(IWebDriver driver)
         {
             _driver = driver;
         }
@@ -35,7 +35,7 @@ namespace WebFlash.PageObject1.PageObject
         {
             return _driver.FindElement(ProductPageButtonFromHeader).Text;
         }
-        //Получение текстового заголовка наименования футтера 
+        //Получение текстового заголовка наименования Футтера 
         public string GetTextFromFutter()
         {
             return _driver.FindElement(HomeFutter).Text;
@@ -47,13 +47,13 @@ namespace WebFlash.PageObject1.PageObject
             _driver.FindElement(HeaderLogo).Click();
         }
 
-        // Переход на главную страницу в Хедер 
+        // Переход на главную страницу через Хедер 
         public void GoToHomePageByHeaderButton()
         {
             _driver.FindElement(ProductPageButtonFromHeader).Click();
         }
 
-        //Переход на страницу Продуктов 
+        //Переход на страницу Продуктов через Хедер 
         public void GoToProductPageByHeaderButton()
         {
             _driver.FindElement(ProductPageButtonFromHeader).Click();

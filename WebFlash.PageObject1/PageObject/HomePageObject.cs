@@ -10,7 +10,7 @@ using Xunit;
 
 namespace WebFlash.PageObject1.PageObject
 {
-    public class HomePageObject : BasePage
+    public class HomePageObject : BasePageObject
     {
         
         public IWebDriver _driver;

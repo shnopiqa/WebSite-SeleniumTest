@@ -8,7 +8,7 @@ using WebFlash.PageObject1.WCPageObject;
 
 namespace WebFlash.PageObject1.PageObject
 {
-    public class ProductPageObject : BasePage
+    public class ProductPageObject : BasePageObject
     {
         private IWebDriver _driver;
         #region LOCATORS 
@@ -17,6 +17,7 @@ namespace WebFlash.PageObject1.PageObject
         private By _productTableBody => By.XPath("//table[@data-test-id='product-table-id']//tbody");
         private By _edditButtonForProductTable => By.XPath("//table[@data-test-id='product-table-id']//tbody//a[@class='btn btn-success']");
         private By _deleteButtonForProductTable => By.XPath("//table[@data-test-id='product-table-id']//tbody//a[@class='btn btn-danger']");
+        private By _createProductButton => By.XPath("//a[@data-test-id='create-product-button']");
         #endregion
         public ProductPageObject(IWebDriver driver) : base(driver)
         {
@@ -29,29 +30,34 @@ namespace WebFlash.PageObject1.PageObject
             _driver.Navigate().GoToUrl(WCProductPage.URL);
         }
         //Получение заголовка страницы 
-        public string GetProducPageTitleText() 
+        public string GetProductPageTitleText() 
         {
             return _driver.FindElement(_productListTitle).Text;
         }
         // Получение заголовков таблицы продуктов
-        public IEnumerable<IWebElement> GetpRrodyctTableHeaders() 
+        public IEnumerable<IWebElement> GetpRroductTableHeaders() 
         {
             return _driver.FindElements(_productTableHeader).ToList();
         }
         // Получение всего списка продуктов из таблицы продуктов 
-        public IEnumerable<IWebElement> GetProdyctTableBody()
+        public IEnumerable<IWebElement> GetProductTableBody()
         {
            return _driver.FindElements(_productTableBody).ToList();
         }
-        //Получение страницы редактирование продукта 
-        public void GetEdditPageFromProductPage() 
+        //Открытие страницы редактирование продукта 
+        public void GetEdditPage() 
         {
             _driver.FindElements(_edditButtonForProductTable).FirstOrDefault().Click();
         }
-        // Получение страницы удаления продукта 
-        public void GetDeletePageFromProductPage() 
+        // Открытие страницы удаления продукта 
+        public void GetDeletePage() 
         {
             _driver.FindElements(_deleteButtonForProductTable).FirstOrDefault().Click();
+        }
+        // Переход на страницу создания продукта 
+        public void GetCreateProductPage() 
+        {
+            _driver.FindElement(_createProductButton).Click();
         }
         #endregion
     }

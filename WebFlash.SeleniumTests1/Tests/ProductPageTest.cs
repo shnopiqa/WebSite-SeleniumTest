@@ -23,9 +23,8 @@ namespace WebFlash.SeleniumTests1.Tests
         [Fact]
         public void GoToEdditPageFromProductPageTest()
         {
-            _homePage.GoToHomePageUrl();
-            _homePage.GetProductPageFromHomePage();
-            _productPage.GetEdditPageFromProductPage();
+            _productPage.GoToProductPageURL();
+            _productPage.GetEdditPage();
         }
     }
 }

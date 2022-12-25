@@ -13,27 +13,19 @@ namespace WebFlash.SeleniumTests1.Tests
     {
         private BaseTest _baseTest;
         private HomePageObject _homePage;
-        private ProductPageObject _productPage;
         public HomePageTest(BaseTest baseTest) 
         {
             _baseTest = baseTest;
             _homePage = new HomePageObject(_baseTest.driver);
-            _productPage = new ProductPageObject(_baseTest.driver);
         }
         //Проверка отображения заголовка на главной странице 
         [Fact]
         public void GoToHomePageTest() 
         {
            _homePage.GoToHomePageUrl();
-            Assert.Equal(WCHomePage.ActualHeader, _homePage.GetHeaderHomePage());
-            
+            Assert.Equal(WCHomePage.ActualHeader, _homePage.GetHeaderHomePage());   
         }
-        // Пробный тест - удалить 
-        [Fact]
-        public void GoToProductPageFromHomePageTest()
-        {
-            _homePage.GoToHomePageUrl();
-        }
+      
         
        
 

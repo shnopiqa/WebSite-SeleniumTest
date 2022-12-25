@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebFlash.PageObject1.WCPageObject
 {
+    // Константы для продуктовой страницы 
     public static class WCProductPage
     {
         public static string URL => "https://localhost:7082/Product/ProductIndex";
