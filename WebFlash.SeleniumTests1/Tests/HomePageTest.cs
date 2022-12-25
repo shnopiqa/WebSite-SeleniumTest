@@ -9,12 +9,12 @@ using Xunit;
 
 namespace WebFlash.SeleniumTests1.Tests
 {
-    public class MainPageTest : IClassFixture<BaseTest>
+    public class HomePageTest : IClassFixture<BaseTest>
     {
         private BaseTest _baseTest;
         private HomePageObject _homePage;
         private ProductPageObject _productPage;
-        public MainPageTest(BaseTest baseTest) 
+        public HomePageTest(BaseTest baseTest) 
         {
             _baseTest = baseTest;
             _homePage = new HomePageObject(_baseTest.driver);
@@ -25,7 +25,6 @@ namespace WebFlash.SeleniumTests1.Tests
         public void GoToHomePageTest() 
         {
            _homePage.GoToHomePageUrl();
-          _homePage.OpenHomePage();
             Assert.Equal(WCHomePage.ActualHeader, _homePage.GetHeaderHomePage());
             
         }
@@ -34,17 +33,9 @@ namespace WebFlash.SeleniumTests1.Tests
         public void GoToProductPageFromHomePageTest()
         {
             _homePage.GoToHomePageUrl();
-            
-
         }
-
-        [Fact]
-        public void GoToEdditPageFromProductPageTest() 
-        {
-            _homePage.GoToHomePageUrl();
-            _homePage.GetProductPageFromHomePage();
-            _productPage.GetEdditPageFromProductPage();
-        }
+        
+       
 
     }
 }
