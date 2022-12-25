@@ -5,11 +5,19 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{1922B130-D2C6-41F6-BD48-EFCAEEB4DA18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlashAsh", "WebFlashAsh\WebFlashAsh.csproj", "{0FAE30AB-2D28-4237-8367-70D27FB34EB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFlashAsh", "WebFlashAsh\WebFlashAsh.csproj", "{0FAE30AB-2D28-4237-8367-70D27FB34EB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5FE2E902-9458-45AB-AE24-8C53647DA802}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlash.Service.API.ProductApi", "WebFlash.Service.API.Product\WebFlash.Service.API.ProductApi.csproj", "{FF3D8E63-1413-4F1C-AD07-1EE8F70CFD58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFlash.Service.API.ProductApi", "WebFlash.Service.API.Product\WebFlash.Service.API.ProductApi.csproj", "{FF3D8E63-1413-4F1C-AD07-1EE8F70CFD58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebFlash.PageObject", "WebFlash.PageObject", "{866B475C-7F8B-498D-A916-1E732AFD1A52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlash.PageObject1", "WebFlash.PageObject1\WebFlash.PageObject1.csproj", "{686F5191-A254-4D5B-996D-86E97319B3B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebFlash.SeleniumTests", "WebFlash.SeleniumTests", "{409465AD-C8D8-4A23-9F8F-E4AEE94F5F9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlash.SeleniumTests1", "WebFlash.SeleniumTests1\WebFlash.SeleniumTests1.csproj", "{659A914D-496F-48B5-BECB-A1C0F6F44E55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +33,14 @@ Global
 		{FF3D8E63-1413-4F1C-AD07-1EE8F70CFD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF3D8E63-1413-4F1C-AD07-1EE8F70CFD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF3D8E63-1413-4F1C-AD07-1EE8F70CFD58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686F5191-A254-4D5B-996D-86E97319B3B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686F5191-A254-4D5B-996D-86E97319B3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{686F5191-A254-4D5B-996D-86E97319B3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{686F5191-A254-4D5B-996D-86E97319B3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659A914D-496F-48B5-BECB-A1C0F6F44E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659A914D-496F-48B5-BECB-A1C0F6F44E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659A914D-496F-48B5-BECB-A1C0F6F44E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659A914D-496F-48B5-BECB-A1C0F6F44E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0FAE30AB-2D28-4237-8367-70D27FB34EB5} = {1922B130-D2C6-41F6-BD48-EFCAEEB4DA18}
 		{FF3D8E63-1413-4F1C-AD07-1EE8F70CFD58} = {5FE2E902-9458-45AB-AE24-8C53647DA802}
+		{686F5191-A254-4D5B-996D-86E97319B3B3} = {866B475C-7F8B-498D-A916-1E732AFD1A52}
+		{659A914D-496F-48B5-BECB-A1C0F6F44E55} = {409465AD-C8D8-4A23-9F8F-E4AEE94F5F9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC9B44D1-54E9-4705-9563-A21EFC79C7C0}
