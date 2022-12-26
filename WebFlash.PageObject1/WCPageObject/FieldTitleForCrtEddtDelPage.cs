@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WebFlash.PageObject1.WCPageObject
 {
     // Перечисление заголовков полей для страницы создания, редактирования, и удаление продуктов
-    public enum TitleEnumForCreateEdditDeletePage
+    public enum FieldTitleForCrtEddtDelPage
     {
         Name,
         CategoryName,

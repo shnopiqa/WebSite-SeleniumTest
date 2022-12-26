@@ -8,7 +8,7 @@ using WebFlash.PageObject1.WCPageObject;
 
 namespace WebFlash.PageObject1.PageObject
 {
-    public class CreateEdditDeleteProudctPageObject : BasePageObject
+    public class CrtEddtDelPageObject : BasePageObject
     {
         private IWebDriver _driver;
         private By _createProductPageTitle => By.XPath("//h1[@class='text-info']");
@@ -22,7 +22,8 @@ namespace WebFlash.PageObject1.PageObject
         private By _categoryFieldTitle => By.XPath("//label[@for='CategoryName']");
         private By _descriptionFieldTitle => By.XPath("//label[@for='Description']");
         private By _priceFieldTitle => By.XPath("//label[@for='Price']");
-        public CreateEdditDeleteProudctPageObject(IWebDriver driver) : base(driver)
+        private By _updateButton => By.XPath("//input[@value='Update']");
+        public CrtEddtDelPageObject(IWebDriver driver) : base(driver)
         {
             _driver = driver;
         }
@@ -59,19 +60,43 @@ namespace WebFlash.PageObject1.PageObject
         {
             Dictionary<string, string> textTitleDic = new Dictionary<string, string>()
             {
-                {TitleEnumForCreateEdditDeletePage.Name.ToString(), _driver.FindElement(_nameFieldTitle).Text},
-                {TitleEnumForCreateEdditDeletePage.CategoryName.ToString(), _driver.FindElement(_categoryFieldTitle).Text},
-                {TitleEnumForCreateEdditDeletePage.Description.ToString(), _driver.FindElement(_descriptionFieldTitle).Text},
-                {TitleEnumForCreateEdditDeletePage.Price.ToString(), _driver.FindElement(_priceFieldTitle).Text}
+                {FieldTitleForCrtEddtDelPage.Name.ToString(), _driver.FindElement(_nameFieldTitle).Text},
+                {FieldTitleForCrtEddtDelPage.CategoryName.ToString(), _driver.FindElement(_categoryFieldTitle).Text},
+                {FieldTitleForCrtEddtDelPage.Description.ToString(), _driver.FindElement(_descriptionFieldTitle).Text},
+                {FieldTitleForCrtEddtDelPage.Price.ToString(), _driver.FindElement(_priceFieldTitle).Text}
 
             };
             return textTitleDic;
         }
         // Получение значения из словаря по ключу 
-        public string GetDictionaryTitleValue(Dictionary<string, string> dict, string key)
+        public string GetDictionaryTitleValue(Dictionary<string, string> dict, FieldTitleForCrtEddtDelPage key)
         {
-            string value = dict[key];
+            string value = dict[key.ToString()];
             return value;
+        }
+        // Очистить поле на странице редактирования страницы 
+        public void ClearField(FieldTitleForCrtEddtDelPage title) 
+        {
+            switch (title) 
+            {
+                case FieldTitleForCrtEddtDelPage.Name:
+                    _driver.FindElement(_nameField).Clear();
+                    break;
+                case FieldTitleForCrtEddtDelPage.CategoryName:
+                    _driver.FindElement(_categoryField).Clear();
+                    break;
+                case FieldTitleForCrtEddtDelPage.Description:
+                    _driver.FindElement(_descriptionTextArea).Clear();
+                    break;
+                case FieldTitleForCrtEddtDelPage.Price:
+                    _driver.FindElement(_priceField).Clear();
+                    break;
+            }
+
+        }
+        public void UpdateButtonClic() 
+        {
+            _driver.FindElement(_updateButton);
         }
     }
 
