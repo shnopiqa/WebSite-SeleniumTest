@@ -62,7 +62,7 @@ namespace WebFlash.PageObject1.PageObject
             _driver.FindElement(_backToListButton).Click();
         }
         // Получение словаря со списком заголовков полей 
-        public Dictionary<string, string> GetTextTitleOfFields() 
+        public Dictionary<string, string> GetDictionaryTitleOfFields() 
         {
             Dictionary<string, string> textTitleDic = new Dictionary<string, string>()
             {
@@ -77,7 +77,7 @@ namespace WebFlash.PageObject1.PageObject
         // Получение значения из словаря по ключу 
         public string GetDictionaryTitleValue(Dictionary<string, string> dict, FieldTitleForCrtEddtDelPage key)
         {
-            string value = dict[key.ToString()];
+            string value = dict.FirstOrDefault(x => x.Value == key.ToString()).Value;
             return value;
         }
         // Очистить поле на странице редактирования страницы 
@@ -110,6 +110,7 @@ namespace WebFlash.PageObject1.PageObject
         {
             _driver.FindElement(_deleteButton);
         }
+
         #endregion
     }
 
