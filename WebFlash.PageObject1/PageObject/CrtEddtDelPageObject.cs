@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace WebFlash.PageObject1.PageObject
     public class CrtEddtDelPageObject : BasePageObject
     {
         private IWebDriver _driver;
+        #region LOCATORS
         private By _createProductPageTitle => By.XPath("//h1[@class='text-info']");
         private By _nameField => By.XPath("//input[@id='Name']");
         private By _categoryField => By.XPath("//input[@id='CategoryName']");
@@ -23,10 +25,14 @@ namespace WebFlash.PageObject1.PageObject
         private By _descriptionFieldTitle => By.XPath("//label[@for='Description']");
         private By _priceFieldTitle => By.XPath("//label[@for='Price']");
         private By _updateButton => By.XPath("//input[@value='Update']");
+        private By _deleteButton => By.XPath("//input[@value='Delete']");
+        #endregion
         public CrtEddtDelPageObject(IWebDriver driver) : base(driver)
         {
             _driver = driver;
+           
         }
+        #region METHODS
         // Перейти на страницу создания продукта по ссылке 
         public void GetUrlCreateProductPage() 
         {
@@ -45,7 +51,7 @@ namespace WebFlash.PageObject1.PageObject
             _driver.FindElement(_descriptionTextArea).SendKeys(description);
             _driver.FindElement(_priceField).SendKeys($"{price}");
         }
-        // Нажатие на кнопку создания продукта 
+        // Нажатие на кнопку подтверждения создания продукта 
         public void CreateProductButtonClick() 
         {
             _driver.FindElement(_createButton).Click();
@@ -94,11 +100,18 @@ namespace WebFlash.PageObject1.PageObject
             }
 
         }
-        public void UpdateButtonClic() 
+        // Нажатие на кнопку подтверждения редактирования продукта 
+        public void UpdateButtonClick() 
         {
             _driver.FindElement(_updateButton);
         }
+        // Нажатие на кнопку подтверждения удаления продукта 
+        public void DeleteButtonClick()
+        {
+            _driver.FindElement(_deleteButton);
+        }
+        #endregion
     }
 
-    
+
 }

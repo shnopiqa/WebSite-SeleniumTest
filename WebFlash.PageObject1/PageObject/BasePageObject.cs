@@ -1,12 +1,14 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
+
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebFlash.PageObject1.WCPageObject;
+using OpenQA.Selenium.Support;
 
 namespace WebFlash.PageObject1.PageObject
 {
@@ -14,14 +16,17 @@ namespace WebFlash.PageObject1.PageObject
     {
         public IWebDriver _driver;
         #region LOCATORS
-        public By HomePageButtonFromHeader => By.XPath("//a[text()='Home']");
-        public By ProductPageButtonFromHeader => By.XPath("//a[@href='/Product/ProductIndex']");
-        public By HeaderLogo => By.XPath("//a[@class='navbar-brand']");
-        public  By HomeFutter => By.XPath("");
+      
+        protected By HomePageButtonFromHeader => By.XPath("//a[text()='Home']");
+        protected By ProductPageButtonFromHeader => By.XPath("//a[@href='/Product/ProductIndex']");
+        protected By HeaderLogo => By.XPath("//a[@class='navbar-brand']");
+        protected By HomeFutter => By.XPath("//footer[@class ='border-top footer text-muted bg-dark']/div[@class='container']");
         #endregion
         public BasePageObject(IWebDriver driver)
         {
             _driver = driver;
+
+         
         }
         #region METHODS
         //Получение текстового заголовка кнопки Home 
@@ -58,6 +63,12 @@ namespace WebFlash.PageObject1.PageObject
         {
             _driver.FindElement(ProductPageButtonFromHeader).Click();
         }
+        public string GetTextFromFooter() 
+        {
+           return _driver.FindElement(HomeFutter).Text;
+        }
+       
+      
         #endregion
     }
 }

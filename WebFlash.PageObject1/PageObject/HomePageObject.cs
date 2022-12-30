@@ -21,6 +21,7 @@ namespace WebFlash.PageObject1.PageObject
         public HomePageObject(IWebDriver driver) : base(driver)
         {
             _driver = driver;
+
         }
         #region METHODS
         //Переход к главной странцие по ссылке 

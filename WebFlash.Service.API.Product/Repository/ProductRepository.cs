@@ -47,7 +47,7 @@ namespace WebFlash.Service.API.ProductApi.Repository
                     return false;
                 }
                 _db.Products.Remove(product);
-                _db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
                 return true;
             }
             catch 

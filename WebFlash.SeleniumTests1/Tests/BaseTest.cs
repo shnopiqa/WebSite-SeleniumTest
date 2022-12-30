@@ -18,6 +18,7 @@ namespace WebFlash.SeleniumTests1.Tests
             driver = new ChromeDriver();
            
             driver.Manage().Window.Maximize();
+
         }
         public void Dispose()
         {

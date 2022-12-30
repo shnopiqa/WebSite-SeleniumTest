@@ -45,12 +45,12 @@ namespace WebFlash.PageObject1.PageObject
            return _driver.FindElements(_productTableBody).ToList();
         }
         //Открытие страницы редактирование продукта 
-        public void GetEdditPage() 
+        public void GetFirstEdditPage() 
         {
             _driver.FindElements(_edditButtonForProductTable).FirstOrDefault().Click();
         }
         // Открытие страницы удаления продукта 
-        public void GetDeletePage() 
+        public void GetFirstDeletePage() 
         {
             _driver.FindElements(_deleteButtonForProductTable).FirstOrDefault().Click();
         }
