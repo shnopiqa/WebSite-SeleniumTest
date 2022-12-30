@@ -63,6 +63,7 @@ namespace WebFlash.PageObject1.PageObject
         {
             _driver.FindElement(ProductPageButtonFromHeader).Click();
         }
+        // Получить текст из футера сайта
         public string GetTextFromFooter() 
         {
            return _driver.FindElement(HomeFutter).Text;

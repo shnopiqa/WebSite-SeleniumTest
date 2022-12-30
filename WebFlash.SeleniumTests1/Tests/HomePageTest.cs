@@ -27,6 +27,7 @@ namespace WebFlash.SeleniumTests1.Tests
            _homePage.GoToHomePageUrl();
             Assert.Equal(WCHomePage.ExpectedHeader, _homePage.GetHeaderHomePage());   
         }
+        // Проверка заголовка страницы продуктов при преходе из главной страницы
         [Fact]
         public void ChekProductPageTitleFromHomePage()
         {
@@ -36,13 +37,13 @@ namespace WebFlash.SeleniumTests1.Tests
             Assert.Equal(WCProductPage.ExpectedHeader, ActualHeader);
        
         }
+        // Проверка заголовка футера на главной странице 
         [Fact]
-        public void ChekProductPageTitleFromHomePage()
+        public void GetFooterTitleFromHomePage()
         {
             _homePage.GoToHomePageUrl();
-            _homePage.GoToProductPageByHeaderButton();
-            var ActualHeader = _productPage.GetProductPageTitleText();
-            Assert.Equal(WCProductPage.ExpectedHeader, ActualHeader);
+            var ActualHeader = _productPage.GetTextFromFooter();
+            Assert.Equal(WCHomePage.ExpectedFutterText, ActualHeader.Trim());
 
         }
 
