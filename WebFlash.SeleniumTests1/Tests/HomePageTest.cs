@@ -9,31 +9,27 @@ using Xunit;
 
 namespace WebFlash.SeleniumTests1.Tests
 {
-    public class HomePageTest : IClassFixture<BaseTest>
+    public class HomePageTest : BaseTest, IClassFixture<BaseTest>
     {
-        private BaseTest _baseTest;
-        private HomePageObject _homePage;
-        private ProductPageObject _productPage;
+
         public HomePageTest(BaseTest baseTest) 
         {
-            _baseTest = baseTest;
-            _homePage = new HomePageObject(_baseTest.driver);
-            _productPage = new ProductPageObject(_baseTest.driver); 
+        
         }
         //Проверка отображения заголовка на главной странице 
         [Fact]
         public void GoToHomePageTest() 
         {
-           _homePage.GoToHomePageUrl();
-            Assert.Equal(WCHomePage.ExpectedHeader, _homePage.GetHeaderHomePage());   
+           homePage.GoToHomePageUrl();
+            Assert.Equal(WCHomePage.ExpectedHeader, homePage.GetHeaderHomePage());   
         }
         // Проверка заголовка страницы продуктов при преходе из главной страницы
         [Fact]
         public void ChekProductPageTitleFromHomePage()
         {
-            _homePage.GoToHomePageUrl();
-            _homePage.GoToProductPageByHeaderButton();
-            var ActualHeader = _productPage.GetProductPageTitleText();
+            homePage.GoToHomePageUrl();
+            homePage.GoToProductPageByHeaderButton();
+            var ActualHeader = productPage.GetProductPageTitleText();
             Assert.Equal(WCProductPage.ExpectedHeader, ActualHeader);
        
         }
@@ -41,8 +37,8 @@ namespace WebFlash.SeleniumTests1.Tests
         [Fact]
         public void GetFooterTitleFromHomePage()
         {
-            _homePage.GoToHomePageUrl();
-            var ActualHeader = _productPage.GetTextFromFooter();
+            homePage.GoToHomePageUrl();
+            var ActualHeader = productPage.GetTextFromFooter();
             Assert.Equal(WCHomePage.ExpectedFutterText, ActualHeader.Trim());
 
         }
