@@ -25,4 +25,16 @@
 1. xunit" Version="2.4.2" 
 1. xunit.assert" Version="2.4.2" 
 1.xunit.runner.visualstudio" Version="2.4.5
+### Настройка миграции в локальную БД
+#### Если используется БД MSSql
+1. В проекте WebFlash.Service.API.ProductApi открыть файл appsettings.json 
+1. В настройке DefaultConnection прописать локальный адрес БД которую вы будете использовать 
+1. В поиске visual studio найти консоль диспетчера пакетов и активировать окно
+1. В консоли выполнить команду add-migration {Название миграции}
+1. После успещной миграции выполнить команду update-database 
+#### Если используется другая БД 
+1. В проекте WebFlash.Service.API.ProductApi нажать праавую кнопку мыши 
+1. Выбрать пункт управление пакетами NuGet 
+1. Установить пакет Microsoft.EntityFrameworkCore.{Название вашей БД}
+
 
