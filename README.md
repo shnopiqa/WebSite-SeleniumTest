@@ -44,9 +44,14 @@
 ![image](https://user-images.githubusercontent.com/104216032/210181100-26f3ff5f-6adb-4446-a33d-6aa85e9c9c57.png)
 1. Выбрать настройку добавить запускаемые проекты 
 1. Выставить на одновременны зап WebFlash.Service.API.ProductApi и клиента WebFlashAsh 
+
+![image](https://user-images.githubusercontent.com/104216032/210181176-230be056-d404-4915-b36a-74029bffe534.png)
+
 1. Запустить проект в фоном режиме с помощью клавишь CTRL + F5 
 
 ### Для запуска тестов: 
 1. Необходимо запустить клиент и сервер в фоновом режиме 
+1. Перейти в проект WebFlash.SeleniumTests1 
+1. Запустить обозреватель тестов во вкладке Тест 
 
 
