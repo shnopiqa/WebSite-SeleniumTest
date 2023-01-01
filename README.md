@@ -9,26 +9,6 @@
 1. Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" 
 1. Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.11"
 1. Microsoft.EntityFrameworkCore.Tools" Version="6.0.11"
-### Пакеты используемые в проекте клиента 
-1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
-1. Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" 
-1. Newtonsoft.Json" Version="13.0.2"
-1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
-1. Swashbuckle.AspNetCore" Version="6.4.0" 
-1. Swashbuckle.AspNetCore.Annotations" Version="6.4.0" 
-1. Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" 
-### Пакеты используемые в проекте Selenium test 
-1. DotNetSeleniumExtras.PageObjects.Core" Version="4.3.0" 
-1. Microsoft.NET.Test.Sdk" Version="17.4.1" 
-1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
-1. Newtonsoft.Json" Version="13.0.2" 
-1. Selenium.Support" Version="4.7.0" 
-1. elenium.WebDriver" Version="4.7.0" 
-1. Selenium.WebDriver.ChromeDriver" Version="108.0.5359.7100" 
-1. SeleniumExtras.WaitHelpers" Version="1.0.2" 
-1. xunit" Version="2.4.2" 
-1. xunit.assert" Version="2.4.2" 
-1.xunit.runner.visualstudio" Version="2.4.5
 ### Настройка миграции в локальную БД
 #### Если используется БД MSSql
 1. В проекте WebFlash.Service.API.ProductApi открыть файл appsettings.json 
@@ -41,6 +21,15 @@
 1. Выбрать пункт управление пакетами NuGet 
 1. Установить пакет Microsoft.EntityFrameworkCore.{Название вашей БД}
 1. Все остальные шаги такие же как в стандартом подключении 
+
+### Пакеты используемые в проекте клиента 
+1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
+1. Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" 
+1. Newtonsoft.Json" Version="13.0.2"
+1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
+1. Swashbuckle.AspNetCore" Version="6.4.0" 
+1. Swashbuckle.AspNetCore.Annotations" Version="6.4.0" 
+1. Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" 
 ### Локальный запуск сервера и клиента
 #### Для запуска сервера и клиента необходимо:
 1. В Visual Studio нажать на правую кнопку мыши в решении WebFlash 
@@ -52,6 +41,18 @@
 ![image](https://user-images.githubusercontent.com/104216032/210181176-230be056-d404-4915-b36a-74029bffe534.png)
 
 1. Запустить проект в фоном режиме с помощью клавишь CTRL + F5 
+### Пакеты используемые в проекте Selenium test 
+1. DotNetSeleniumExtras.PageObjects.Core" Version="4.3.0" 
+1. Microsoft.NET.Test.Sdk" Version="17.4.1" 
+1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
+1. Newtonsoft.Json" Version="13.0.2" 
+1. Selenium.Support" Version="4.7.0" 
+1. elenium.WebDriver" Version="4.7.0" 
+1. Selenium.WebDriver.ChromeDriver" Version="108.0.5359.7100" 
+1. SeleniumExtras.WaitHelpers" Version="1.0.2" 
+1. xunit" Version="2.4.2" 
+1. xunit.assert" Version="2.4.2" 
+1.xunit.runner.visualstudio" Version="2.4.5
 
 ### Для запуска тестов: 
 1. Необходимо запустить клиент и сервер в фоновом режиме 
