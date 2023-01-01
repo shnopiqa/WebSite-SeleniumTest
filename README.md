@@ -13,6 +13,10 @@
 1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
 1. Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" 
 1. Newtonsoft.Json" Version="13.0.2"
+1. Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" 
+1. Swashbuckle.AspNetCore" Version="6.4.0" 
+1. Swashbuckle.AspNetCore.Annotations" Version="6.4.0" 
+1. Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" 
 ### Пакеты используемые в проекте Selenium test 
 1. DotNetSeleniumExtras.PageObjects.Core" Version="4.3.0" 
 1. Microsoft.NET.Test.Sdk" Version="17.4.1" 
